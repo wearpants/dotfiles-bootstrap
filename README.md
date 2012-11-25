@@ -14,5 +14,6 @@ default, everything is excluded.
 To specify an alternate location for the git repo (instead of 
 `~/.dotfiles`), call like `DOTFILES_DIR=/path/to/repo init`.
 
-**init** create a new empty dotfiles setup
-**clone http://...** clone and checkout an existing dotfiles repo
+* **init** create a new empty dotfiles setup
+
+* **clone https://github.com/someuser/dotfiles.git** clone and checkout an existing dotfiles repo
