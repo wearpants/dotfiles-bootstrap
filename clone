@@ -1,0 +1,11 @@
+#!/bin/bash
+if [[ -z $1 ]]; then echo Must provide a git url; exit 1; fi
+if [[ -z $DOTFILES_DIR ]]; then DOTFILES_DIR="$HOME/.dotfiles"; fi
+
+git clone --mirror "$1" $DOTFILES_DIR
+cd $DOTFILES_DIR
+git config core.bare false
+git config core.worktree $HOME
+git config core.excludesfile "${DOTFILES_DIR}_ignore"
+git checkout
+echo "Cloned dotfiles from $1 to $DOTFILES_DIR"
